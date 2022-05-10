@@ -10,7 +10,7 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import { useQuery } from "react-query";
-import { getCastMovie } from "../../api/tmdb-api";
+import { getCastMovie } from "../../api/movies-api";
 import Spinner from '../spinner';
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";

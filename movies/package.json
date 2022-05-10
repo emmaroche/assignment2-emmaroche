@@ -73,4 +73,5 @@
     "@storybook/react": "^6.4.18",
     "webpack": "^5.68.0"
   }
+  ,"proxy":"http://localhost:8080"
 }

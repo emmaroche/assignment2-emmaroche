@@ -1,5 +1,5 @@
 import React from "react";
-import { getGenres } from "../../api/tmdb-api";
+import { getGenres } from "../../api/movies-api";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";

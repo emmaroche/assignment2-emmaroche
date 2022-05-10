@@ -6,6 +6,7 @@
     justify-content: center;
     gap: 10px;
     padding-top: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif  ;
     
   }
   
@@ -32,3 +33,53 @@
     color: grey;
     background-color: grey;
   }
+
+  .input{
+    padding: 10px;
+
+    left:10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 1px solid #1e88e5;
+    color: #1e88e5;
+    cursor: pointer;
+  }
+
+  .button{
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid #1e88e5;
+    color: white;
+    background-color: #1e88e5;
+    cursor: pointer;
+  }
+
+  .h1{
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    color: #1e88e5;
+    cursor: pointer;
+    font-family:Verdana, Geneva, Tahoma, sans-serif  ;
+  }
+
+  .p2{
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-family:Verdana, Geneva, Tahoma, sans-serif  ;
+  }
+
+  .p{
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif  ;
+    color: black;
+    cursor: pointer;
+  }
+
+  

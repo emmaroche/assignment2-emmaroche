@@ -1,7 +1,7 @@
 import React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { getSimilarMovie } from "../../api/tmdb-api";
+import { getSimilarMovie } from "../../api/movies-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 import ImageListItemBar from "@mui/material/ImageListItemBar";

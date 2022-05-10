@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import { getPersonImages } from "../../api/tmdb-api";
+import { getPersonImages } from "../../api/movies-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
 import Typography from "@mui/material/Typography";
