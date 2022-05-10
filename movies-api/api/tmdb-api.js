@@ -61,7 +61,6 @@ export const getMovies = () => {
     });
   };
 
-
   export const getPersonMovie = (id) => {
     return fetch(
       `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
@@ -105,7 +104,6 @@ export const getMovies = () => {
          throw error
       });
     };
-
 
   
   export const getUpcomingMovie = () => {

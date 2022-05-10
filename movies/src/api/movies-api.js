@@ -32,66 +32,6 @@ export const getMovie = (args) => {
  });
 };
 
-export const getSimilarMovie = ({ queryKey }) => {
-  const [, idPart] = queryKey;
-  const { id } = idPart;
-  return fetch(
-    `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}`
-  ).then( (response) => {
-    if (!response.ok) {
-      throw new Error(response.json().message);
-    }
-    return response.json();
-
-  })
-  .catch((error) => {
-    throw error
- });
-};
-
-// export const getSimilarMovie = (id) => {
-
-//   return fetch(
-
-//     '/api/movies/[:movieId]/similar', {
-
-//           headers: {
-
-//               'Authorization': window.localStorage.getItem('token')
-
-//           }
-
-//       }
-
-//   ).then(res => {
-
-//       return res.json();
-
-//   }).catch((error) => {
-
-//       console.log(error);
-
-//   });
-
-// };
-
-export const getRecomMovie = ({ queryKey }) => {
-  const [, idPart] = queryKey;
-  const { id } = idPart;
-  return fetch(
-    `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${process.env.REACT_APP_TMDB_KEY}`
-  ).then( (response) => {
-    if (!response.ok) {
-      throw new Error(response.json().message);
-    }
-    return response.json();
-
-  })
-  .catch((error) => {
-    throw error
- });
-};
-
   export const getGenres = async () => {
     return fetch(
       "https://api.themoviedb.org/3/genre/movie/list?api_key=" +
@@ -108,7 +48,7 @@ export const getRecomMovie = ({ queryKey }) => {
    });
   };
   
-  
+
   export const getMovieImages = ({ queryKey }) => {
     const [, idPart] = queryKey;
     const { id } = idPart;
@@ -144,39 +84,6 @@ export const getRecomMovie = ({ queryKey }) => {
    });
   };
 
-  export const getCastMovie = ({ queryKey }) => {
-    const [, idPart] = queryKey;
-    const { id } = idPart;
-    return fetch(
-      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
-    ).then( (response) => {
-      if (!response.ok) {
-        throw new Error(response.json().message);
-      }
-      return response.json();
-  
-    })
-    .catch((error) => {
-      throw error
-   });
-  };
-
-  export const getPersonMovie = (args) => {
-    // console.log(args)
-    const [, idPart] = args.queryKey;
-    const { id } = idPart;
-    return fetch(
-      `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
-    ).then((response) => {
-      if (!response.ok) {
-        throw new Error(response.json().message);
-      }
-      return response.json();
-    })
-    .catch((error) => {
-      throw error
-   });
-  };
 
   export const getMovieReviews = (id) => {
     return fetch(
@@ -253,7 +160,87 @@ export const getTopMovie = () => {
   });
 };
 
+export const getSimilarMovie = ({ queryKey }) => {
+  const [, idPart] = queryKey;
+  const { id } = idPart;
+  return fetch(
+    `/api/movies/${id}/similar`, {
+         headers: {
+             'Authorization': window.localStorage.getItem('token')
+         }
+     })
+ .then( (response) => {
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
 
+  })
+  .catch((error) => {
+    throw error
+ });
+};
 
+export const getRecomMovie = ({ queryKey }) => {
+  const [, idPart] = queryKey;
+  const { id } = idPart;
+  return fetch(
+    `/api/movies/${id}/recommendations`, {
+         headers: {
+             'Authorization': window.localStorage.getItem('token')
+         }
+     })
+ .then( (response) => {
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
 
+  })
+  .catch((error) => {
+    throw error
+ });
+};
+
+export const getCastMovie = ({ queryKey }) => {
+  const [, idPart] = queryKey;
+  const { id } = idPart;
+  return fetch(
+    `/api/movies/${id}/credits`, {
+         headers: {
+             'Authorization': window.localStorage.getItem('token')
+         }
+     }
+ ).then( (response) => {
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
+
+  })
+  .catch((error) => {
+    throw error
+ });
+};
+
+export const getPersonMovie = (args) => {
+  // console.log(args)
+  const [, idPart] = args.queryKey;
+  const { id } = idPart;
+  return fetch(
+    `/api/movies/${id}/person`, {
+         headers: {
+             'Authorization': window.localStorage.getItem('token')
+         }
+     }
+ ).then((response) => {
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
+  })
+  .catch((error) => {
+    throw error
+ });
+};
 
