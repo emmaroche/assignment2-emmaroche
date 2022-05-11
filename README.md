@@ -12,9 +12,13 @@ Name: Emma Roche (20088680)
 
  + Added React App integration where the React app makes a request to the Web API which would then request data from TMDB.
 
- + Mongo integration
+ + Mongo integration.
 
- + Use of express middleware such as error handling in the web-api index.js and api/movies/index.js
+ + Use of express middleware such as error handling in the web-api index.js and api/movies/index.js.
+
+ + Can GET upcoming movies, top rated movies, now playing movies, latest movies, similar movies, reccommended movies, release dates for movies, credit and people data in API using postman.
+
+ + Can POST user registration data to API using postman.
 
 ## API Configuration
 
