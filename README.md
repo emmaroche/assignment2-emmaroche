@@ -10,15 +10,11 @@ Name: Emma Roche (20088680)
 
  + Added two new API routes, including a parameterised URL for Latest movies that have been put out and Movie release dates for different countries.
 
- + Added React App integration where the React app makes a     request to
+ + Added React App integration where the React app makes a request to the Web API which would then request data from TMDB.
 
-+ Mongo integration
+ + Mongo integration
 
-+ Use of express middleware such as error handling in the web-api index.js and api/movies/index.js
-
-## Setup requirements.
-
-N/A
+ + Use of express middleware such as error handling in the web-api index.js and api/movies/index.js
 
 ## API Configuration
 
@@ -42,11 +38,9 @@ ______________________
 
 - /api/movies/{movieid}/reviews | GET | Get all reviews for movie 
 
-- /api/movies/{movieid}/reviews | POST | Create a new review for Movie 
-
 - /api/users | POST | Login
 
-- /api/users | POST | Sign up
+- /api/users?action=register | POST | Sign up
 
 - /api/movies/tmdb/upcoming | GET | Gets a list of upcoming movies
 
@@ -86,8 +80,6 @@ Protected routes include:
       
 ## Integrating with React App
 
-Describe how you integrated your React app with the API. List the views that use your Web API instead of the TMDB API. Describe any other updates to the React app from Assignment One.
-
 First, to have the React development server proxy the API requests to the Express API server, I added "proxy":"http://localhost:8080" before the final closing brace in the package.json file of my react app.
 
 I added further React App integration by combining the react app and api together, where the React app makes a request to the Web API which would then request data from TMDB.
@@ -111,7 +103,3 @@ Views used in Web API instead of the TMDB API:
 - Person details page: /:id/person
 
 - Genres: /tmdb/genres
-
-## Independent learning (if relevant)
-
-N/A
