@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-//Routes included in both the react app and movie API folder
+//Routes included in both the react app and web API folder
 
 export const getMovies = () => {
     return fetch(
@@ -160,7 +160,7 @@ export const getMovies = () => {
     });
   };
   
-   //Routes included in the movie API folder only
+   //Routes included in the web API folder only
 
    export const getLatest = () => {
     return fetch(

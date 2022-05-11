@@ -95,7 +95,7 @@ export const getMovie = (args) => {
       });
   };
 
-//Routes included in both the react app and movie API folder
+//Routes included in both the react app and web API folder
 
 export const login = (username, password) => {
   return fetch('/api/users', {
