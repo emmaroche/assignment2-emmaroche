@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 //     res.status(200).json(gettheGenres);
 //   }));
 
-  router.get('/tmdb/upcoming', asyncHandler( async(req, res) => {
+  router.get('/tmdb/genres', asyncHandler( async(req, res) => {
     const upcomingMovies = await getGenres();
     res.status(200).json(upcomingMovies);
   }));
