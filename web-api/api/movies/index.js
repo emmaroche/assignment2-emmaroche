@@ -32,18 +32,6 @@ router.get('/:id', asyncHandler(async (req, res) => {
 }));
 
 // Get movie reviews
-// router.get('/:id/reviews', (req, res) => {
-//     const id = parseInt(req.params.id);
-//     // find reviews in list
-//     if (movieReviews.id == id) {
-//         res.status(200).json(movieReviews);
-//     } else {
-//         res.status(404).json({
-//             message: 'The resource you requested could not be found.',
-//             status_code: 404
-//         });
-//     }
-// });
 
 router.get('/:id/reviews', asyncHandler(async (req, res) => {
     const id = parseInt(req.params.id);

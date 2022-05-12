@@ -4,15 +4,17 @@ Name: Emma Roche (20088680)
 
 ## Features.
 
- + Added new views for login and sign up authentication 
+ + Added new views for login and sign up authentication.
+
+ + Added style to login and sign up views to match the current theme of the web app.
 
  + Added protected routes onto every page expect the main home page so you will have to sign up/login to access these routes.
 
- + Added two new API routes, including a parameterised URL for Latest movies that have been put out and Movie release dates for different countries.
+ + Added two new API routes, including a parameterised URL, for Latest movies that have been put out and Movie release dates for different countries.
 
  + Added React App integration where the React app makes a request to the Web API which would then request data from TMDB.
 
- + Mongo integration.
+ + Mongo integration where I connected to the mongodb database, created a db folder with an index.js file where I imported the db module into it and loaded the user data to Mongodb using seedDB.
 
  + Use of express middleware such as error handling in the web-api index.js and api/movies/index.js.
 
@@ -35,12 +37,6 @@ secret=YourJWTSecret
 ______________________
 
 ## API Design
-
-- /api/movies | GET | Gets a list of movies 
-
-- /api/movies/{movieid} | GET | Gets a single movie
-
-- /api/movies/{movieid}/reviews | GET | Get all reviews for movie 
 
 - /api/users | POST | Login
 
